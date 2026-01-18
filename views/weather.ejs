@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>🌤 Weather Report</h1>
+      <p>Current conditions for <strong><%= weather.name %></strong></p>
+    </header>
+
+    <!-- Main Temperature Card -->
+    <section class="main-card">
+      <h2><%= weather.weather[0].description %></h2>
+      <div class="temperature">
+        <%= Math.round(weather.main.temp) %>°C
+      </div>
+      <p class="feels-like">
+        Feels like <%= Math.round(weather.main.feels_like) %>°C
+      </p>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-grid">
+
+      <div class="info-card">
+        <h3>🌡 Pressure</h3>
+        <p><%= weather.main.pressure %> hPa</p>
+      </div>
+
+      <div class="info-card">
+        <h3>💧 Humidity</h3>
+        <p><%= weather.main.humidity %>%</p>
+      </div>
+
+      <div class="info-card">
+        <h3>💨 Wind</h3>
+        <p><%= weather.wind.speed %> m/s</p>
+      </div>
+
+      <div class="info-card">
+        <h3>👁 Visibility</h3>
+        <p><%= weather.visibility / 1000 %> km</p>
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
