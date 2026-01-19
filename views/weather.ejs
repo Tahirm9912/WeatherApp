@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Weather App</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
@@ -11,45 +11,65 @@
 
     <!-- Header -->
     <header class="header">
-      <h1>🌤 Weather Report</h1>
-      <p>Current conditions for <strong><%= weather.name %></strong></p>
+      <h1>☀️ Weather App</h1>
+      <p>Search for any city in the world</p>
     </header>
 
-    <!-- Main Temperature Card -->
-    <section class="main-card">
-      <h2><%= weather.weather[0].description %></h2>
-      <div class="temperature">
-        <%= Math.round(weather.main.temp) %>°C
-      </div>
-      <p class="feels-like">
-        Feels like <%= Math.round(weather.main.feels_like) %>°C
-      </p>
-    </section>
+    <!-- Search Box -->
+    <form class="search-form" action="/weather" method="post">
+      <input 
+        type="text" 
+        name="city" 
+        placeholder="Enter city name..." 
+        required 
+      />
+      <button type="submit">Search</button>
+    </form>
 
-    <!-- Info Cards -->
-    <section class="info-grid">
+    <% if (typeof(weather)!== "undefined") { %>
 
-      <div class="info-card">
-        <h3>🌡 Pressure</h3>
-        <p><%= weather.main.pressure %> hPa</p>
-      </div>
+      <!-- Main Weather Card -->
+      <section class="main-card">
+        <h2><%= weather.location.name %>, <%= weather.sys.country %></h2>
+        <p class="description">
+          <%= weather.weather[0].description %>
+        </p>
 
-      <div class="info-card">
-        <h3>💧 Humidity</h3>
-        <p><%= weather.main.humidity %>%</p>
-      </div>
+        <div class="temperature">
+          <%= Math.round(weather.main.temp) %>°C
+        </div>
 
-      <div class="info-card">
-        <h3>💨 Wind</h3>
-        <p><%= weather.wind.speed %> m/s</p>
-      </div>
+        <p class="feels-like">
+          Feels like <%= Math.round(weather.main.feels_like) %>°C
+        </p>
+      </section>
 
-      <div class="info-card">
-        <h3>👁 Visibility</h3>
-        <p><%= weather.visibility / 1000 %> km</p>
-      </div>
+      <!-- Extra Info -->
+      <section class="info-grid">
 
-    </section>
+        <div class="info-card">
+          <h3>🌡 Pressure</h3>
+          <p><%= weather.main.pressure %> hPa</p>
+        </div>
+
+        <div class="info-card">
+          <h3>💧 Humidity</h3>
+          <p><%= weather.main.humidity %>%</p>
+        </div>
+
+        <div class="info-card">
+          <h3>💨 Wind</h3>
+          <p><%= weather.wind.speed %> m/s</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🌫 Visibility</h3>
+          <p><%= weather.visibility / 1000 %> km</p>
+        </div>
+
+      </section>
+
+    <% } %>
 
   </div>
 
