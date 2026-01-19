@@ -138,15 +138,4 @@ Always use environment variables (`.env`).
 
 ## 👨‍💻 Author
 
-Built by **[Your Name]**
-
----
-
-If you want, I can:
-
-* Make a **shorter README**
-* Add **screenshots section**
-* Write a **professional GitHub-style README**
-* Customize it for **deployment**
-
-Just tell me 👍
+Built by **Tahir Mehmood**
