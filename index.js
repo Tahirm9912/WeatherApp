@@ -29,7 +29,8 @@ app.post("/weather", async (req, res)=>{
             info: weather_data
         })
     } catch (error) {
-        res.status(404).send("Failed")
+        
+        res.status(404).send("Failed to get the Weather of mentioned Area")
     }
     
     
