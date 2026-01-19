@@ -12,7 +12,7 @@ app.use(express.static("public"))
 
 
 const url = "http://api.weatherapi.com/v1/current.json?key=";
-const api = "";
+const api = "dd5b0cc1ed654e6c931173916261801";
 const cityName = "jhelum"
 
 app.get("/", async (req, res)=>{

@@ -7,18 +7,18 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  background: linear-gradient(135deg, #78e710, #030303);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333;
+  color: white;
 }
 
 /* App container */
 .app-container {
   width: 90%;
   max-width: 850px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -105,6 +105,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
+  color: black;
 }
 
 .info-card {
