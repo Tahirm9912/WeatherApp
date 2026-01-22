@@ -45,7 +45,7 @@ project/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/tahirm9912/weather-app.git
 cd weather-app
 ```
 
@@ -55,22 +55,6 @@ cd weather-app
 npm install
 ```
 
-### 3️⃣ Set up environment variables (recommended)
-
-Create a `.env` file:
-
-```env
-WEATHER_API_KEY=your_api_key_here
-```
-
-Update your code:
-
-```js
-import dotenv from "dotenv";
-dotenv.config();
-```
-
----
 
 ## ▶️ Run the application
 
@@ -102,14 +86,6 @@ http://localhost:3000
 
 ---
 
-## 🧾 Example API Usage
-
-```js
-const url_api = `http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=`;
-const result = await axios.get(url_api + city);
-```
-
----
 
 ## ❗ Error Handling
 
