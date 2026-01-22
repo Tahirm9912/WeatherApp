@@ -30,10 +30,11 @@ Simple and clean Express setup
 ```
 project/
 │
-├── public/            # Static files (CSS, images, etc.)
+├── public/            
+│   └── styles.css  
 ├── views/
-│   └── weather.ejs    # EJS template
-├── index.js           # Main server file
+│   └── weather.ejs    
+├── index.js           
 ├── package.json
 └── README.md
 ```
@@ -45,7 +46,7 @@ project/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/tahirm9912/weather-app.git
+git clone https://github.com/Tahirm9912/weatherApp.git
 cd weather-app
 ```
 
